@@ -118,6 +118,7 @@ TODO         text
 browserslist    text
 Makefile        text
 makefile        text
+package-lock.json	binary
 
 ## HEROKU
 Procfile    text
