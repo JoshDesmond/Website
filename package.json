@@ -1,0 +1,23 @@
+{
+  "name": "node-web-env",
+  "version": "1.0.0",
+  "description": "an personal npm package for web development",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc",
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshDesmond/Website.git"
+  },
+  "author": "Josh Desmond",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshDesmond/Website/issues"
+  },
+  "homepage": "https://github.com/JoshDesmond/Website#readme"
+}
