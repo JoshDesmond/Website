@@ -19,5 +19,16 @@
   "bugs": {
     "url": "https://github.com/JoshDesmond/Website/issues"
   },
-  "homepage": "https://github.com/JoshDesmond/Website#readme"
+  "homepage": "https://github.com/JoshDesmond/Website#readme",
+  "dependencies": {
+    "doiuse": "^4.2.0",
+    "postcss": "^7.0.17"
+  },
+  "browserslist": [
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Edge versions",
+    "last 2 Safari versions",
+    "IE 11"
+  ]
 }
