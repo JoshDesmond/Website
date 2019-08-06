@@ -2,7 +2,7 @@
   "name": "node-web-env",
   "version": "1.0.0",
   "description": "an personal npm package for web development",
-  "main": "index.js",
+  "main": "www/src/index.js",
   "directories": {
     "doc": "doc",
     "test": "test"
