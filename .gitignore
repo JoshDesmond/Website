@@ -15,8 +15,7 @@
 # # use `git rm --cached`
 # #
 # # -----------------------------------------------------------------
-# ignore all files starting with . or ~
-.*
+# ignore all files starting with or ~
 ~*
 
 # ignore node/grunt dependency directories
