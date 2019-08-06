@@ -15,20 +15,26 @@
     "url": "git+https://github.com/JoshDesmond/Website.git"
   },
   "author": "Josh Desmond",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/JoshDesmond/Website/issues"
   },
   "homepage": "https://github.com/JoshDesmond/Website#readme",
   "dependencies": {
-    "doiuse": "^4.2.0",
-    "postcss": "^7.0.17"
+    "postcss": "^7.0.17",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "redux": "^4.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.5.5",
+    "@babel/preset-react": "^7.0.0",
+    "mocha": "^6.2.0"
   },
   "browserslist": [
     "last 2 Chrome versions",
     "last 2 Firefox versions",
     "last 2 Edge versions",
-    "last 2 Safari versions",
-    "IE 11"
+    "last 2 Safari versions"
   ]
 }
