@@ -8,4 +8,4 @@
 # TECHNOLOGY COLOPHON
 
     CSS5, HTML5
-    Reactstrap
+    Node.js
