@@ -1,15 +1,6 @@
 console.log("Hello");
 
-class Model {
-    constructor() {
-        console.log("World.");
-    }
-}
-  
-class View {
-    constructor() {}
-}
-  
+
 class Controller {
     constructor(model, view) {
         this.model = model

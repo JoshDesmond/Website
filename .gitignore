@@ -21,13 +21,10 @@
 # ignore node/grunt dependency directories
 node_modules/
 
-# ignore composer vendor directory
+# Ignore build directories
+/build
 /vendor
-
-# ignore components loaded via Bower
 /bower_components
-
-# ignore jekyll build directory
 /_site
 
 # ignore OS generated files

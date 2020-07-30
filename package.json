@@ -20,12 +20,14 @@
     "url": "https://github.com/JoshDesmond/Website/issues"
   },
   "homepage": "https://github.com/JoshDesmond/Website#readme",
-  "dependencies": {
-    "gulp-cli": "^2.3.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "@babel/core": "^7.10.5",
     "@babel/preset-env": "^7.10.4",
+    "gulp": "^4.0.2",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-sourcemaps": "^2.6.5",
     "mocha": "^8.0.1"
   },
   "browserslist": [
