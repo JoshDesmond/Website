@@ -1,3 +1,6 @@
+import {Model} from "./model/model.js";
+import {View} from "./views/views.js";
+
 console.log("Hello");
 
 
