@@ -25,7 +25,7 @@
   "homepage": "https://github.com/JoshDesmond/Website#readme",
   "dependencies": {},
   "devDependencies": {
-    "mocha": "^8.0.1",
+    "mocha": "^8.3.2",
     "snowpack": "^3.1.2"
   },
   "browserslist": [
