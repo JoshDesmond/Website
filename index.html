@@ -23,6 +23,7 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
+  <!-- The following HTML is inspired by Kevin Powell's portfolio site tutorial from freeCodeCamp -->
   <header>
     <div class="logo">
       <img src="www/public/img/logo.jpg" alt="">
@@ -35,20 +36,79 @@
     <nav class="nav">
       <ul class="nav__list">
         <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">About me</a></li>
-        <li class="nav__item"><a href="#" class="nav__link">My Work</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+        <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
       </ul>
     </nav>
   </header>
 
   <!-- Introduction -->
   <section class="intro" id="home">
-    <h2>CSS Template</h2>
-    <p>Hello world! This is Template for building websites, based off of HTML5 Boilerplate.</p>
+    <h1 class="section__title section__title--intro">
+      Hi, my name is <strong>Desmond.</strong>
+    </h1>
+    <p class="section__subtitle section__subtitle--intro">I'm a fullstack developer.</p>
+    <button class="">View projects</button>
   </section>
 
-  <div class="footer">
+  <!-- About me -->
+  <section class="about-me" id="about">
+    <h2 class="section__title section__title--about">Who I am</h2>
+    <p class="section__subtitle section__subtitle--about"></p>
+
+    <div class="about-me__body">
+      <p></p>
+      <p></p>
+    </div>
+
+    <img src="www/public/img/headshot.jpg" alt="Picture of Desmond smiling" />
+  </section>
+
+  <!-- My Portfolio/Work -->
+  <section class="my-work" id="work">
+    <h2 class="section_title">My work</h2>
+    <p class="section__subtitle"></p>
+
+    <div class="portfolio">
+      <!-- Project 1: ____ -->
+      <a href="#" class="portfolio__item">
+        <img src="" alt="" class="portfolio__img" />
+      </a>
+
+      <!-- Project 2: ____ -->
+      <a href="#" class="portfolio__item">
+        <img src="" alt="" class="portfolio__img" />
+      </a>
+
+      <!-- Project 3: ____ -->
+      <a href="#" class="portfolio__item">
+        <img src="" alt="" class="portfolio__img" />
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2 class="section__title">Contact</h2>
+    <p class="section__subtitle"></p>
+
+    <form class="contact__form" id="contact-form">
+      <input placeholder="Name" type="text" name="name" required />
+      <input placeholder="Enter email" type="email" name="email" required />
+      <textarea placeholder="Your Message" type="text" name="message">
+      </textarea>
+      <input class="button" type="submit" id="submit" value="SUBMIT" />
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
     <p>Footer</p>
+  </footer>
+
+  <div id="preload">
+    <!-- Preload images here & style as display: none in CSS -->
   </div>
 
   <!-- Scripts -->
