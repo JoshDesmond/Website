@@ -13,9 +13,13 @@
 
   <link rel="stylesheet" href="www/styles/normalize.css">
   <link rel="stylesheet" href="www/styles/main.css">
-  <link rel="stylesheet" href="www/styles/styles.css">
+  <link rel="stylesheet" href="www/styles/skeleton.css">
 
-  <meta name="theme-color" content="#fafafa">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Ubuntu+Mono&family=Ubuntu:wght@300&display=swap"
+    rel="stylesheet">
+
 </head>
 
 <body>
@@ -23,21 +27,104 @@
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
   <![endif]-->
 
-  <!-- Add your site or application content here -->
-  <div class="topnav">
-    <a href="#">Link</a>
-    <a href="#">Link</a>
-    <a href="#">Link</a>
+  <!-- The following HTML is inspired by Kevin Powell's portfolio site tutorial from freeCodeCamp -->
+  <header>
+    <div class="logo">
+      <img src="www/public/img/logo.jpg" alt="">
+    </div>
+
+    <button class="nav-toggle" aria-label="toggle navigation">
+      <span class="hamburger"></span>
+    </button>
+
+    <nav class="nav">
+      <ul class="nav__list">
+        <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
+        <li class="nav__item"><a href="#about" class="nav__link">About me</a></li>
+        <li class="nav__item"><a href="#work" class="nav__link">My Work</a></li>
+        <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Introduction -->
+  <section class="intro" id="home">
+    <h1 class="section__title section__title--intro">
+      Hi, my name is <strong>Desmond.</strong>
+    </h1>
+    <p class="section__subtitle section__subtitle--intro">I'm a fullstack developer.</p>
+    <button class="">Learn More</button>
+  </section>
+
+  <!-- About me -->
+  <section class="about-me" id="about">
+    <h2 class="section__title section__title--about">About</h2>
+
+    <div class="about-me__body">
+      <p>I'm a fullstack developer from Nashua, NH. I was a student at Worcester Polytechnic Institute, where I studied
+        computer science and also a little bit of bioinformatics. My long term interests are in artificial intelligence,
+        software engineering, and doing work that one would deem interesting.</p>
+      <p>In the short term, my goal is simply gaining experience to become a better all-around software developer. To
+        see some of the projects I've worked on before, check out the links below.</p>
+    </div>
+
+    <img src="www/public/img/headshot.jpg" alt="Picture of Desmond smiling" />
+  </section>
+
+  <!-- My Portfolio/Work -->
+  <section class="my-work" id="work">
+    <h2 class="section_title">My work</h2>
+    <p class="section__subtitle"></p>
+
+    <div class="portfolio">
+      <!-- Project 1: ____ -->
+      <a href="#" class="portfolio__item">
+        <img src="" alt="" class="portfolio__img" />
+      </a>
+
+      <!-- Project 2: ____ -->
+      <a href="#" class="portfolio__item">
+        <img src="" alt="" class="portfolio__img" />
+      </a>
+
+      <!-- Project 3: ____ -->
+      <a href="#" class="portfolio__item">
+        <img src="" alt="" class="portfolio__img" />
+      </a>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="contact" id="contact">
+    <h2 class="section__title">Contact</h2>
+    <p class="section__subtitle"></p>
+
+    <form class="contact__form" id="contact-form">
+      <input placeholder="Name" type="text" name="name" required />
+      <input placeholder="Enter email" type="email" name="email" required />
+      <textarea placeholder="Your Message" type="text" name="message">
+      </textarea>
+      <input class="button" type="submit" id="submit" value="SUBMIT" />
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <ul class="social-list">
+      <li class="social-list__item"><a class="social-list__link">http://linkedin.com/in/joshdesmond</a></li>
+      <li class="social-list__item"><a class="social-list__link">https://github.com/joshdesmond</a></li>
+      <li class="social-list__item"><a class="social-list__link">https://twitter.com/DeveloperDez</a></li>
+    </ul>
+    <div class="copyright-footnote">
+      <p>JOSH DESMOND ©2021</p>
+    </div>
+  </footer>
+
+  <div id="preload">
+    <!-- Preload images here & style as display: none in CSS -->
   </div>
 
-  <div class="content">
-    <h2>CSS Template</h2>
-    <p>Hello world! This is Template for building websites, based off of HTML5 Boilerplate.</p>
-  </div>
-
-  <div class="footer">
-    <p>Footer</p>
-  </div>
+  <!-- Scripts -->
   <script type="module" src="www/js/index.js"></script>
   <script src="www/js/console.cjs"></script>
 

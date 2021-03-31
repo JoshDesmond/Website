@@ -11,6 +11,16 @@
    Base styles: opinionated defaults
    ========================================================================== */
 
+/* 
+ * Tells the browser to account for any border and padding in the values you 
+ * specify for an element's width and height. 
+ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box
+}
+
 html {
   color: #222;
   font-size: 1em;
@@ -97,6 +107,70 @@ textarea {
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
+
+:root {
+  --ff-title: 'Ubuntu', sans-serif;
+  --ff-mono: 'Ubuntu Mono', monospace;
+  --ff-text: 'Oxygen', sans-serif;
+
+  --fw-reg: 300;
+  --fw-bold: 900;
+
+  --clr-light: #fff;
+  --clr-dark: #303030;
+  --clr-accent: #40826D;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2.25rem;
+  --fs-h3: 1.25rem;
+  --fs-body: 1rem;
+}
+
+/* Larger fonts for larger screens */
+@media (min-width: 900px) {
+  :root {
+    --fs-h1: 4.5rem;
+    --fs-h2: 3.75rem;
+    --fs-h3: 1.5rem;
+    --fs-body: 1.125rem;
+  }
+}
+
+body {
+  background: var(--clr-light);
+  color: var(--clr-dark);
+  font-family: var(--ff-text);
+  font-size: var(--fs-body);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* Typography */
+
+h1, h2, h3 {
+  line-height: 1.1;
+  margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+.section__title {
+
+}
+
+.section__subtitle {
+  margin: 0;
+  font-size: var(--fs-h3);
+}
+
+.section__subtitle--intro {
+
+}
 
 /* ==========================================================================
    Helper classes
