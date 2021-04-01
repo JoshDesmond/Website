@@ -109,21 +109,26 @@ textarea {
    ========================================================================== */
 
 :root {
-  --ff-title: 'Ubuntu', sans-serif;
-  --ff-mono: 'Ubuntu Mono', monospace;
-  --ff-text: 'Oxygen', sans-serif;
+  --ff-text: 'Roboto', sans-serif;
+  --ff-mono: 'Roboto Mono', monospace;
+  /* --ff-title: 'Roboto Slab', serif; */
+  --ff-title: 'Roboto', sans-serif;
 
   --fw-reg: 300;
   --fw-bold: 900;
 
   --clr-light: #fff;
   --clr-dark: #303030;
+  --clr-double-dark: #181a1b;
   --clr-accent: #40826D;
 
   --fs-h1: 3rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
+
+  --shadow: 0.25em 0.25em 0.75em rgba(0,0,0.25),
+            0.125em 0.125em 0.25em rgba(0,0,0,.15);
 }
 
 /* Larger fonts for larger screens */
@@ -143,16 +148,23 @@ body {
   font-size: var(--fs-body);
 }
 
+section {
+  padding: 1em 2em;
+}
+
 img {
   display: block;
   max-width: 100%;
 }
 
-/* Typography */
+/* ====== Typography ====== */
+
+strong { font-weight: var(--fw-bold)}
 
 h1, h2, h3 {
-  line-height: 1.1;
+  line-height: 1;
   margin: 0;
+  text-align: center;
 }
 
 h1 { font-size: var(--fs-h1) }
@@ -160,7 +172,12 @@ h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
 .section__title {
+  font-family: var(--ff-title);
+}
 
+.section__title--intro strong {
+  display: block;
+  color: var(--clr-accent);
 }
 
 .section__subtitle {
@@ -169,8 +186,68 @@ h3 { font-size: var(--fs-h3) }
 }
 
 .section__subtitle--intro {
-
+  font-family: var(--ff-mono);
 }
+
+/* ====== Intro section ====== */
+
+nav { display: none; } /* TODO temp */
+
+.intro {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+
+/* ====== About section ====== */
+.about-me {
+  color: var(--clr-light);
+  background-color: var(--clr-accent);
+  background-image: url(../public/img/Skyline\ Boston\ by\ ReneS.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.section__title--about::after {
+  content: '';
+  display: block;
+  width: 25%;
+  height: 1px;
+  margin: 0.25em auto .5em;
+  background: var(--clr-accent);
+}
+
+.about-me__content-pane {
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  box-shadow: var(--shadow);
+  border-radius: .5em;
+}
+
+.about-me__body {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img#headshot {
+  min-width: 200;
+  z-index: 2;
+  filter: drop-shadow(0px 1px 15px var(--shadow));
+  padding: 1.5em;
+}
+
+.about-me__text {
+  padding: 1.5em;
+}
+
+
+/** ====== My work section ====== */
+.my-work {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+
 
 /* ==========================================================================
    Helper classes

@@ -17,8 +17,8 @@
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Ubuntu+Mono&family=Ubuntu:wght@300&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab\
+  :wght@400;900&family=Roboto:wght@300&display=swap" rel="stylesheet">
 
 </head>
 
@@ -53,27 +53,40 @@
       Hi, my name is <strong>Desmond.</strong>
     </h1>
     <p class="section__subtitle section__subtitle--intro">I'm a fullstack developer.</p>
-    <button class="">Learn More</button>
+    <a class="button button-primary" href="#about">Learn More</a>
   </section>
 
   <!-- About me -->
   <section class="about-me" id="about">
-    <h2 class="section__title section__title--about">About</h2>
+    <div class="about-me__content-pane container">
+      <h2 class="section__title section__title--about">About</h2>
 
-    <div class="about-me__body">
-      <p>I'm a fullstack developer from Nashua, NH. I was a student at Worcester Polytechnic Institute, where I studied
-        computer science and also a little bit of bioinformatics. My long term interests are in artificial intelligence,
-        software engineering, and doing work that one would deem interesting.</p>
-      <p>In the short term, my goal is simply gaining experience to become a better all-around software developer. To
-        see some of the projects I've worked on before, check out the links below.</p>
+      <div class="about-me__body">
+        <img id="headshot" class="four columns" src="www/public/img/headshot.jpg" alt="Picture of Desmond smiling" />
+        <div class="about-me__text eight columns">
+          <p>I'm a fullstack developer from Nashua, NH. I was a student at Worcester Polytechnic Institute, where I
+            studied
+            computer science and also a little bit of bioinformatics. My long term interests are in artificial
+            intelligence,
+            software engineering, and doing work that one would deem interesting.</p>
+          <p>In the short term, my goal is simply gaining experience to become a better all-around software developer.
+            To
+            see some of the projects I've worked on before, check out the links below.</p>
+        </div>
+      </div>
+
     </div>
 
-    <img src="www/public/img/headshot.jpg" alt="Picture of Desmond smiling" />
+    <!-- TODO cite image: "Creative Commons 10th Birthday Celebration San Francisco" by tvol is licensed under CC BY 2.0 -->
+    <!-- TODO cite image: "Skyline Boston" by ReneS is licensed under CC BY 2.0 -->
+    <!--
+      <p><a href="https://www.flickr.com/photos/63504485@N00/1594828030">"Skyline Boston"</a> by <a href="https://www.flickr.com/photos/63504485@N00">ReneS</a> is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&amp;atype=html">CC BY 2.0</a><a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&amp;atype=html" target="_blank" rel="noopener noreferrer"><img src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=f1f8d49b-eed9-41d1-abf9-70facc1185d4" alt="" /></a></p>
+    -->
   </section>
 
   <!-- My Portfolio/Work -->
   <section class="my-work" id="work">
-    <h2 class="section_title">My work</h2>
+    <h2 class="section__title">My work</h2>
     <p class="section__subtitle"></p>
 
     <div class="portfolio">
@@ -99,7 +112,7 @@
     <h2 class="section__title">Contact</h2>
     <p class="section__subtitle"></p>
 
-    <form class="contact__form" id="contact-form">
+    <form class="contact__form container" id="contact-form">
       <input placeholder="Name" type="text" name="name" required />
       <input placeholder="Enter email" type="email" name="email" required />
       <textarea placeholder="Your Message" type="text" name="message">
