@@ -122,7 +122,7 @@ textarea {
   --clr-double-dark: #181a1b;
   --clr-accent: #40826D;
 
-  --fs-h1: 3rem;
+  --fs-h1: 2.25rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
@@ -134,8 +134,8 @@ textarea {
 /* Larger fonts for larger screens */
 @media (min-width: 900px) {
   :root {
-    --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
+    --fs-h1: 3.00rem;
+    --fs-h2: 3.00rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
@@ -175,18 +175,23 @@ h3 { font-size: var(--fs-h3) }
   font-family: var(--ff-title);
 }
 
-.section__title--intro strong {
-  display: block;
-  color: var(--clr-accent);
-}
-
 .section__subtitle {
   margin: 0;
   font-size: var(--fs-h3);
 }
 
+.section__title--intro {
+  font-weight: var(--fw-reg);
+  font-family: var(--ff-mono);
+}
+
+.section__title--intro strong {
+  color: var(--clr-accent);
+}
+
 .section__subtitle--intro {
   font-family: var(--ff-mono);
+  font-size: var(--fs-h1);
 }
 
 /* ====== Intro section ====== */
@@ -234,11 +239,11 @@ img#headshot {
   min-width: 200;
   z-index: 2;
   filter: drop-shadow(0px 1px 15px var(--shadow));
-  padding: 1.5em;
+  padding: 4%;
 }
 
 .about-me__text {
-  padding: 1.5em;
+  padding: 4%;
 }
 
 
