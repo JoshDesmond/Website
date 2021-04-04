@@ -213,6 +213,10 @@ nav { display: none; } /* TODO temp */
   background-size: cover;
 }
 
+.section__title--about {
+  padding-top: .5em;
+}
+
 .section__title--about::after {
   content: '';
   display: block;
@@ -251,6 +255,21 @@ img#headshot {
 .my-work {
   background-color: var(--clr-dark);
   color: var(--clr-light);
+}
+
+/** ====== Contact Section ====== */
+.contact__form {
+  margin: 10%;
+}
+
+.contact__form>#submit {
+  
+}
+
+input[type=text], input[type=email], textarea {
+  width: 100%;
+  padding: .5em;
+  resize: vertical;
 }
 
 
