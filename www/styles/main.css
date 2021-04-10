@@ -180,18 +180,30 @@ h3 { font-size: var(--fs-h3) }
   font-size: var(--fs-h3);
 }
 
-.section__title--intro {
+.intro--title {
   font-weight: var(--fw-reg);
   font-family: var(--ff-mono);
 }
 
-.section__title--intro strong {
+.intro--title strong {
   color: var(--clr-accent);
 }
 
-.section__subtitle--intro {
+.intro--subtitle {
+  margin: 0;
   font-family: var(--ff-mono);
   font-size: var(--fs-h1);
+}
+
+/* Adds line after section titles */
+.section__title::after {
+  content: '';
+  display: block;
+  width: 25%;
+  height: 1px;
+  margin: 0.25em auto .5em;
+  background: var(--clr-accent);
+  opacity: 50%;
 }
 
 /* ====== Intro section ====== */
@@ -215,15 +227,6 @@ nav { display: none; } /* TODO temp */
 
 .section__title--about {
   padding-top: .5em;
-}
-
-.section__title--about::after {
-  content: '';
-  display: block;
-  width: 25%;
-  height: 1px;
-  margin: 0.25em auto .5em;
-  background: var(--clr-accent);
 }
 
 .about-me__content-pane {
@@ -255,6 +258,68 @@ img#headshot {
 .my-work {
   background-color: var(--clr-dark);
   color: var(--clr-light);
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /** TODO this currently adds gap to the right of last element*/
+  justify-content: center;
+}
+
+.portfolio__item {
+  flex: 1 0 200px;
+  background: var(--clr-double-dark);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  max-width: 350px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  transition: all 200ms ease-in-out;
+}
+
+.portfolio__item:hover {
+  transform: translateY(-.25rem);
+}
+
+.portfolio__item--content {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio__item--title {
+  font-size: var(--fs-h3);
+
+}
+
+.portfolio__img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.portfolio__item--snippet {
+  font-size: var(--fs-body);
+
+}
+
+.portfolio__item--buttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: auto;
+}
+
+.portfolio__item--buttons>.button {
+  width: 100%;
+  margin: 0;
 }
 
 /** ====== Contact Section ====== */
