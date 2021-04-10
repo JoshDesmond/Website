@@ -38,6 +38,7 @@ Thumbs.db
 .vscode/
 www/styles/index.html
 
+
 # ignore log files and databases
 *.log
 *.sql
