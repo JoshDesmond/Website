@@ -109,28 +109,35 @@ textarea {
    ========================================================================== */
 
 :root {
-  --ff-title: 'Ubuntu', sans-serif;
-  --ff-mono: 'Ubuntu Mono', monospace;
-  --ff-text: 'Oxygen', sans-serif;
+
+  --ff-text: 'Roboto', sans-serif;
+  --ff-mono: 'Roboto Mono', monospace;
+  /* --ff-title: 'Roboto Slab', serif; */
+  --ff-title: 'Roboto', sans-serif;
 
   --fw-reg: 300;
   --fw-bold: 900;
 
   --clr-light: #fff;
   --clr-dark: #303030;
+  --clr-double-dark: #181a1b;
   --clr-accent: #40826D;
 
-  --fs-h1: 3rem;
+  --fs-h1: 2.25rem;
   --fs-h2: 2.25rem;
   --fs-h3: 1.25rem;
   --fs-body: 1rem;
+
+  --shadow: 0.25em 0.25em 0.75em rgba(0,0,0.25),
+            0.125em 0.125em 0.25em rgba(0,0,0,.15);
+
 }
 
 /* Larger fonts for larger screens */
 @media (min-width: 900px) {
   :root {
-    --fs-h1: 4.5rem;
-    --fs-h2: 3.75rem;
+    --fs-h1: 3.00rem;
+    --fs-h2: 3.00rem;
     --fs-h3: 1.5rem;
     --fs-body: 1.125rem;
   }
@@ -143,16 +150,23 @@ body {
   font-size: var(--fs-body);
 }
 
+section {
+  padding: 1em 2em;
+}
+
 img {
   display: block;
   max-width: 100%;
 }
 
-/* Typography */
+/* ====== Typography ====== */
+
+strong { font-weight: var(--fw-bold)}
 
 h1, h2, h3 {
-  line-height: 1.1;
+  line-height: 1;
   margin: 0;
+  text-align: center;
 }
 
 h1 { font-size: var(--fs-h1) }
@@ -160,7 +174,7 @@ h2 { font-size: var(--fs-h2) }
 h3 { font-size: var(--fs-h3) }
 
 .section__title {
-
+  font-family: var(--ff-title);
 }
 
 .section__subtitle {
@@ -168,9 +182,163 @@ h3 { font-size: var(--fs-h3) }
   font-size: var(--fs-h3);
 }
 
-.section__subtitle--intro {
+.intro--title {
+  font-weight: var(--fw-reg);
+  font-family: var(--ff-mono);
+}
+
+.intro--title strong {
+  color: var(--clr-accent);
+}
+
+.intro--subtitle {
+  margin: 0;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-h1);
+}
+
+/* Adds line after section titles */
+.section__title::after {
+  content: '';
+  display: block;
+  width: 25%;
+  height: 1px;
+  margin: 0.25em auto .5em;
+  background: var(--clr-accent);
+  opacity: 50%;
+}
+
+/* ====== Intro section ====== */
+
+nav { display: none; } /* TODO temp */
+
+.intro {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+  text-align: center;
+}
+
+/* ====== About section ====== */
+.about-me {
+  color: var(--clr-light);
+  background-color: var(--clr-accent);
+  background-image: url(../public/img/Skyline\ Boston\ by\ ReneS.jpg);
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.section__title--about {
+  padding-top: .5em;
+}
+
+.about-me__content-pane {
+  background-color: rgba(0, 0, 0, 0.5);
+  
+  box-shadow: var(--shadow);
+  border-radius: .5em;
+}
+
+.about-me__body {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+img#headshot {
+  min-width: 200;
+  z-index: 2;
+  filter: drop-shadow(0px 1px 15px var(--shadow));
+  padding: 4%;
+}
+
+.about-me__text {
+  padding: 4%;
+}
+
+
+/** ====== My work section ====== */
+.my-work {
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
+}
+
+.portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem; /** TODO this currently adds gap to the right of last element*/
+  justify-content: center;
+}
+
+.portfolio__item {
+  flex: 1 0 200px;
+  background: var(--clr-double-dark);
+  border-radius: 5px;
+  box-shadow: var(--shadow);
+  max-width: 350px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  transition: all 200ms ease-in-out;
+}
+
+.portfolio__item:hover {
+  transform: translateY(-.25rem);
+}
+
+.portfolio__item--content {
+  padding: 1rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.portfolio__item--title {
+  font-size: var(--fs-h3);
 
 }
+
+.portfolio__img {
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.portfolio__item--snippet {
+  font-size: var(--fs-body);
+
+}
+
+.portfolio__item--buttons {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  margin-top: auto;
+}
+
+.portfolio__item--buttons>.button {
+  width: 100%;
+  margin: 0;
+}
+
+/** ====== Contact Section ====== */
+.contact__form {
+  margin: 10%;
+}
+
+.contact__form>#submit {
+  
+}
+
+input[type=text], input[type=email], textarea {
+  width: 100%;
+  padding: .5em;
+  resize: vertical;
+}
+
 
 /* ==========================================================================
    Helper classes

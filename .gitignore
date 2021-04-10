@@ -36,6 +36,8 @@ Thumbs.db
 *.sublime-workspace
 *.komodoproject
 .vscode/
+www/styles/index.html
+
 
 # ignore log files and databases
 *.log

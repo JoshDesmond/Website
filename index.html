@@ -17,8 +17,9 @@
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Oxygen&family=Ubuntu+Mono&family=Ubuntu:wght@300&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto+Slab\
+  :wght@400;900&family=Roboto:wght@300&display=swap" rel="stylesheet">
+
 
 </head>
 
@@ -49,63 +50,112 @@
 
   <!-- Introduction -->
   <section class="intro" id="home">
-    <h1 class="section__title section__title--intro">
-      Hi, my name is <strong>Desmond.</strong>
-    </h1>
-    <p class="section__subtitle section__subtitle--intro">I'm a fullstack developer.</p>
-    <button class="">Learn More</button>
+
+    <canvas class="intro-canvas">
+
+    </canvas>
+    <div class="intro-html flex">
+      <h1 class="intro--title">
+        Hi, my name is <strong>Desmond</strong>.
+      </h1>
+      <p class="intro--subtitle">I'm a fullstack developer.</p>
+      <a class="button button-primary" href="#about">Learn More</a>
+    </div>
   </section>
 
   <!-- About me -->
   <section class="about-me" id="about">
-    <h2 class="section__title section__title--about">About</h2>
+    <div class="about-me__content-pane container">
+      <h2 class="section__title section__title--about">About</h2>
 
-    <div class="about-me__body">
-      <p>I'm a fullstack developer from Nashua, NH. I was a student at Worcester Polytechnic Institute, where I studied
-        computer science and also a little bit of bioinformatics. My long term interests are in artificial intelligence,
-        software engineering, and doing work that one would deem interesting.</p>
-      <p>In the short term, my goal is simply gaining experience to become a better all-around software developer. To
-        see some of the projects I've worked on before, check out the links below.</p>
+      <div class="about-me__body">
+        <img id="headshot" class="four columns" src="www/public/img/headshot.jpg" alt="Picture of Desmond smiling" />
+        <div class="about-me__text eight columns">
+          <p>I'm a fullstack developer from Nashua, NH. I was a student at Worcester Polytechnic Institute, where I
+            studied
+            computer science and also a little bit of bioinformatics. My long term interests are in artificial
+            intelligence,
+            software engineering, and doing work that one would deem interesting.</p>
+          <p>In the short term, my goal is simply gaining experience to become a better all-around software developer.
+            To
+            see some of the projects I've worked on before, check out the links below.</p>
+        </div>
+      </div>
+
     </div>
 
-    <img src="www/public/img/headshot.jpg" alt="Picture of Desmond smiling" />
+    <!-- TODO cite image: "Creative Commons 10th Birthday Celebration San Francisco" by tvol is licensed under CC BY 2.0 -->
+    <!-- TODO cite image: "Skyline Boston" by ReneS is licensed under CC BY 2.0 -->
+    <!--
+      <p><a href="https://www.flickr.com/photos/63504485@N00/1594828030">"Skyline Boston"</a> by <a href="https://www.flickr.com/photos/63504485@N00">ReneS</a>
+         is licensed under <a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&amp;atype=html">CC BY 2.0</a><a href="https://creativecommons.org/licenses/by/2.0/?ref=ccsearch&amp;atype=html" 
+         target="_blank" rel="noopener noreferrer"><img src="https://search.creativecommons.org/static/img/cc_icon.svg?image_id=f1f8d49b-eed9-41d1-abf9-70facc1185d4" alt="" /></a></p>
+    -->
   </section>
 
   <!-- My Portfolio/Work -->
   <section class="my-work" id="work">
-    <h2 class="section_title">My work</h2>
+    <h2 class="section__title">My work</h2>
     <p class="section__subtitle"></p>
 
-    <div class="portfolio">
-      <!-- Project 1: ____ -->
-      <a href="#" class="portfolio__item">
-        <img src="" alt="" class="portfolio__img" />
-      </a>
+    <div class="portfolio container">
+      <!-- Project 1: Poker Preflop Range Generator -->
+      <div class="portfolio__item">
+        <img src="www/public/img/poker.jpg" alt="" class="portfolio__img" />
+        <div class="portfolio__item--content">
+          <h3 class="portfolio__item--title">Poker Range Generator</h3>
+          <p class="portfolio__item--snippet">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsa
+            , earum repellendus</p>
+          <div class="portfolio__item--buttons">
+            <a class="button" href="https://joshdesmond.github.io/PokerHandRangeGenerator/">Link</a>
+            <a class="button" href="https://github.com/JoshDesmond/PokerHandRangeGenerator">Repo</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- Project 2: ____ -->
-      <a href="#" class="portfolio__item">
-        <img src="" alt="" class="portfolio__img" />
-      </a>
+      <!-- Project 2: Halfway -->
+      <div class="portfolio__item">
+        <img src="www/public/img/halfway.jpg" alt="" class="portfolio__img" />
+        <div class="portfolio__item--content">
+          <h3 class="portfolio__item--title">Halfway: Android App</h3>
+          <p class="portfolio__item--snippet">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsa
+            , earum repellendus</p>
+          <div class="portfolio__item--buttons">
+            <a class="button" href="https://tinyurl.com/y5slgbxk">Link</a>
+            <a class="button" href="https://github.com/xjsc16x/halfway-app">Repo</a>
+          </div>
+        </div>
+      </div>
 
-      <!-- Project 3: ____ -->
-      <a href="#" class="portfolio__item">
-        <img src="" alt="" class="portfolio__img" />
-      </a>
+      <!-- Project 3: SmartBlock -->
+      <div class="portfolio__item">
+        <img src="www/public/img/Smartblock.jpg" alt="" class="portfolio__img" />
+        <div class="portfolio__item--content">
+          <h3 class="portfolio__item--title">Browser Extension: SmartBlock</h3>
+          <p class="portfolio__item--snippet">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Aliquam ipsa
+            repellendus</p>
+          <div class="portfolio__item--buttons">
+            <a class="button" href="https://joshdesmond.github.io/SmartBlock/website/index.html">Link</a>
+            <a class="button" href="https://github.com/JoshDesmond/SmartBlock">Repo</a>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
   <!-- Contact -->
   <section class="contact" id="contact">
     <h2 class="section__title">Contact</h2>
-    <p class="section__subtitle"></p>
+    <div class="container">
 
-    <form class="contact__form" id="contact-form">
-      <input placeholder="Name" type="text" name="name" required />
-      <input placeholder="Enter email" type="email" name="email" required />
-      <textarea placeholder="Your Message" type="text" name="message">
-      </textarea>
-      <input class="button" type="submit" id="submit" value="SUBMIT" />
-    </form>
+      <form class="contact__form" id="contact-form">
+        <input placeholder="Name" type="text" name="name" required />
+        <input placeholder="Enter email" type="email" name="email" required />
+        <textarea placeholder="Your Message" type="text" name="message"></textarea>
+        <input class="button" type="submit" id="submit" value="SUBMIT" />
+      </form>
+
+    </div>
   </section>
 
   <!-- Footer -->
