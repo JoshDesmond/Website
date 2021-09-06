@@ -210,12 +210,35 @@ h3 { font-size: var(--fs-h3) }
 
 /* ====== Intro section ====== */
 
-nav { display: none; } /* TODO temp */
+nav {
+  display: none;
+} /* TODO temp */
 
 .intro {
   background-color: var(--clr-dark);
   color: var(--clr-light);
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+  padding: 0;
+}
+
+.intro-canvas {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100vw;
+  z-index: -1;
+}
+
+.intro-html {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ====== About section ====== */
@@ -236,6 +259,8 @@ nav { display: none; } /* TODO temp */
   
   box-shadow: var(--shadow);
   border-radius: .5em;
+
+  margin-top: 7em; /* leaves room for nav bar */
 }
 
 .about-me__body {
