@@ -20,7 +20,7 @@ export class View {
 
     animate() {
         requestAnimationFrame(this.animate.bind(this));
-        this.canvas.clearRect(0, 0, this.model.canvasHeight, this.model.canvasWidth);
+        this.canvas.clearRect(0, 0, this.model.canvasWidth, this.model.canvasHeight);
         this.model.tick();
     }
 
@@ -31,7 +31,7 @@ export class View {
     drawParticle(particle) {
         this.canvas.beginPath();
         this.canvas.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2, false);
-        this.canvas.fillStyle = '#8C5523'; // TODO temp
+        this.canvas.fillStyle = '#5cb5997d'; // TODO temp
         this.canvas.fill();
     }
 
