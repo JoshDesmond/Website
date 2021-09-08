@@ -24,13 +24,12 @@ export class Model {
         for (const p of this.particles) {
             this.updateParticle(p);
         }
-        console.log('tick');
     }
 
     updateMousePosition(x, y) {
         this.mouseX = x;
         this.mouseY = y;
-        this.mouseRadius = (this.canvasHeight / 200) * (this.canvasWidth / 200);
+        this.mouseRadius = (this.canvasHeight / 100) * (this.canvasWidth / 100);
     }
 
     updateCanvasSize(width, height) {
@@ -47,35 +46,47 @@ export class Model {
             particle.directionY = -particle.directionY;
         }
 
-        const collisionFunction = (x, y, radius) => {
+        const collisionFunction = (x, y, radius, speed) => {
             const dx = x - particle.x;
             const dy = y - particle.y;
             const distance = Math.sqrt(dx * dx + dy * dy);
             if (distance < radius + particle.size) {
                 if (x < particle.x && particle.x < this.canvasWidth - particle.size * 10) {
-                    particle.directionX += .05;
+                    particle.directionX += speed;
                 }
                 if (x > particle.x && particle.x > particle.size * 10) {
-                    particle.directionX -= .05;
+                    particle.directionX -= speed;
                 }
 
                 if (y < particle.y && particle.y < this.canvasHeight - particle.size * 10) {
-                    particle.directionY += .05;
+                    particle.directionY += speed;
                 }
                 if (y > particle.y && particle.y > particle.size * 10) {
-                    particle.directionY -= .05;
+                    particle.directionY -= speed;
                 }
             }
         }
 
         // Mouse collision
-        collisionFunction(this.mouseX, this.mouseY, this.mouseRadius);
+        collisionFunction(this.mouseX, this.mouseY, this.mouseRadius, .2);
         // Collision bubble around center of screen
-        collisionFunction(this.canvasWidth/2, this.canvasHeight/2, this.canvasWidth/6);
+        collisionFunction(this.canvasWidth/2, this.canvasHeight/2, this.canvasWidth/6, .05);
 
         // Move particles
         particle.x = particle.x + particle.directionX;
         particle.y = particle.y + particle.directionY;
+        if (particle.directionX > 5) {
+            particle.directionX -= .2;
+        }
+        if (particle.directionY > 5) {
+            particle.directionY -= .2;
+        }
+        if (particle.directionX < -5) {
+            particle.directionX += .2;
+        }
+        if (particle.directionY < -5) {
+            particle.directionY += .2;
+        }
         particle.update();
     }
 
