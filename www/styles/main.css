@@ -143,6 +143,10 @@ textarea {
   }
 }
 
+html {
+  min-width: 600px;
+}
+
 body {
   background: var(--clr-light);
   color: var(--clr-dark);
@@ -152,6 +156,10 @@ body {
 
 section {
   padding: 1em 2em;
+}
+
+* {
+  scroll-behavior: smooth !important;
 }
 
 img {
@@ -218,7 +226,10 @@ h3 { font-size: var(--fs-h3) }
   justify-content: center;
   flex-direction: column;
   height: 100vh;
+  width: 100vw;
+  max-width: 100%;
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 .intro-canvas {
@@ -227,10 +238,9 @@ h3 { font-size: var(--fs-h3) }
   top: 0;
   height: 100vh;
   width: 100vw;
+  max-width: 100%;
   display: block;
-
 }
-
 
 .intro-html {
   display: flex;
@@ -238,6 +248,43 @@ h3 { font-size: var(--fs-h3) }
   align-items: center;
   justify-content: center;
   z-index: 10;
+}
+
+/* ========= Header ========== */
+
+.nav {
+  display: flex;
+  background: #111;
+  color: var(--clr-light);
+  position: fixed;
+  width: 100vw;
+  top: 0;
+  z-index: 20;
+  justify-content: center;
+}
+
+.nav__list {
+  padding-left: 2em;
+  display: flex;
+  list-style-type: none;
+  height: 100%;
+  align-content: center;
+}
+
+.nav a { 
+  color: inherit;
+  text-decoration: none;
+  padding: .5em;
+}
+
+.nav__item {
+  height: 0;
+  margin-bottom: 0;
+}
+
+.nav__link:hover {
+  color: var(--clr-accent);
+  opacity: .7;
 }
 
 /* ====== About section ====== */
@@ -284,6 +331,10 @@ img#headshot {
 .my-work {
   background-color: var(--clr-dark);
   color: var(--clr-light);
+}
+
+.my-work .section__title {
+  margin-top: 2em;
 }
 
 .portfolio {
