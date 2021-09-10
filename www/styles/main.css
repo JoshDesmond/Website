@@ -158,6 +158,7 @@ section {
   padding: 1em 2em;
 }
 
+
 * {
   scroll-behavior: smooth !important;
 }
@@ -217,6 +218,7 @@ h3 { font-size: var(--fs-h3) }
 }
 
 /* ====== Intro section ====== */
+
 
 .intro {
   background: radial-gradient(var(--clr-dark), var(--clr-double-dark));
@@ -287,6 +289,7 @@ h3 { font-size: var(--fs-h3) }
 .nav__link:hover {
   color: var(--clr-accent);
   opacity: .7;
+
 }
 
 /* ====== About section ====== */
@@ -308,7 +311,9 @@ h3 { font-size: var(--fs-h3) }
   box-shadow: var(--shadow);
   border-radius: .5em;
 
+
   margin-top: 7em; /* leaves room for nav bar */
+
 }
 
 .about-me__body {
