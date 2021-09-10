@@ -261,14 +261,16 @@ h3 { font-size: var(--fs-h3) }
   top: 0;
   z-index: 20;
   justify-content: center;
+  border-bottom: 3px solid var(--clr-accent);
 }
 
+
 .nav__list {
-  padding-left: 2em;
   display: flex;
   list-style-type: none;
   height: 100%;
   align-content: center;
+  font-size: var(--fs-h3);
 }
 
 .nav a { 
@@ -412,6 +414,33 @@ input[type=text], input[type=email], textarea {
   width: 100%;
   padding: .5em;
   resize: vertical;
+}
+
+/** ========== Footer ========== */
+.footer {
+  background: #111;
+  color: var(--clr-accent);
+  text-align: center;
+  padding: 2.5em 0;
+}
+
+.footer a { color: inherit }
+
+.social-list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  list-style-type: none;
+  margin-bottom: 0;
+}
+
+.social-list__item {
+  font-size: 2.5em;
+  margin: 0 .3em;
+}
+
+.social-list__link:hover {
+  opacity: .7;
 }
 
 
