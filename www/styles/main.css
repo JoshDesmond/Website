@@ -143,9 +143,14 @@ textarea {
   }
 }
 
-html {
-  min-width: 600px;
+@media (max-width: 600px) {
+  :root {
+    --fs-h1: 1.5rem;
+    --fs-h2: 1.5rem;
+    --fs-h3: 1rem;
+  }
 }
+
 
 body {
   background: var(--clr-light);
@@ -194,6 +199,7 @@ h3 { font-size: var(--fs-h3) }
 .intro--title {
   font-weight: var(--fw-reg);
   font-family: var(--ff-mono);
+  margin-bottom: 0.5rem;
 }
 
 .intro--title strong {
@@ -204,6 +210,9 @@ h3 { font-size: var(--fs-h3) }
   margin: 0;
   font-family: var(--ff-mono);
   font-size: var(--fs-h1);
+  text-align: center;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
 }
 
 /* Adds line after section titles */
@@ -312,21 +321,54 @@ h3 { font-size: var(--fs-h3) }
   border-radius: .5em;
 
 
-  margin-top: 7em; /* leaves room for nav bar */
+  margin-top: 5em; /* leaves room for nav bar */
 
 }
 
 .about-me__body {
   align-items: center;
+  justify-content: center;
   display: flex;
   flex-wrap: wrap;
 }
 
 img#headshot {
-  min-width: 200;
-  z-index: 2;
-  filter: drop-shadow(0px 1px 15px var(--shadow));
-  padding: 4%;
+  border-radius: 1em;
+  max-width: 100%;
+  width: auto;
+}
+
+.headshot-box-shadow {
+  position: relative;
+  text-align: center;
+  border: 2em;
+}
+
+.headshot-box-shadow::after {
+  border-radius: 1em;
+  box-shadow: inset 3px 6px 5px 1px #000;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  height: 100%;
+  z-index: 5;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+}
+
+@media (min-width: 500px) {
+  .headshot-box-shadow {
+    min-width: 200px;
+  }
+}
+
+@media (max-width: 550px) {
+  .headshot-box-shadow{ 
+    max-width: 250px;
+  }
 }
 
 .about-me__text {
@@ -347,7 +389,6 @@ img#headshot {
 .portfolio {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.5rem; /** TODO this currently adds gap to the right of last element*/
   justify-content: center;
 }
 
@@ -363,6 +404,7 @@ img#headshot {
   justify-content: center;
   align-items: stretch;
   transition: all 200ms ease-in-out;
+  margin: .5em;
 }
 
 .portfolio__item:hover {
@@ -404,6 +446,7 @@ img#headshot {
 .portfolio__item--buttons>.button {
   width: 100%;
   margin: 0;
+  padding: 0;
 }
 
 /** ====== Contact Section ====== */
