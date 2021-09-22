@@ -320,9 +320,7 @@ h3 { font-size: var(--fs-h3) }
   box-shadow: var(--shadow);
   border-radius: .5em;
 
-
   margin-top: 5em; /* leaves room for nav bar */
-
 }
 
 .about-me__body {
@@ -336,6 +334,8 @@ img#headshot {
   border-radius: 1em;
   max-width: 100%;
   width: auto;
+  opacity: .85;
+  border: 3px solid rgba(0, 0, 0, 0.26);
 }
 
 .headshot-box-shadow {
@@ -346,7 +346,7 @@ img#headshot {
 
 .headshot-box-shadow::after {
   border-radius: 1em;
-  box-shadow: inset 3px 6px 5px 1px #000;
+  box-shadow: inset 3px 6px 5px 1px rgba(0, 0, 0, 0.582);
   bottom: 0;
   content: "";
   display: block;
@@ -420,7 +420,7 @@ img#headshot {
 
 .portfolio__item--title {
   font-size: var(--fs-h3);
-
+  padding-bottom: .8em;
 }
 
 .portfolio__img {
@@ -433,7 +433,6 @@ img#headshot {
 
 .portfolio__item--snippet {
   font-size: var(--fs-body);
-
 }
 
 .portfolio__item--buttons {
@@ -447,6 +446,11 @@ img#headshot {
   width: 100%;
   margin: 0;
   padding: 0;
+  color: var(--clr-light);
+}
+
+.portfolio__item--buttons>.button:hover {
+  color: var(--clr-accent);
 }
 
 /** ====== Contact Section ====== */
