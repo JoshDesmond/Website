@@ -5,7 +5,7 @@ export function onSubmit(e) {
 
     const formData = new FormData(formElement);
 
-    const response = fetch('http://localhost:3000/', {
+    const response = fetch('https://developerdesmond.tech/api/', {
         method: 'POST',
         body: JSON.stringify({
             name: formData.get('name'),
