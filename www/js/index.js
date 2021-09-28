@@ -1,7 +1,8 @@
 import { Model } from "./model/model.js";
 import { View } from "./views/views.js";
+import { onSubmit } from "./contact-form.js";
 
-console.log("Hello");
+console.log("Hello friend. To check out the source for this website visit https://github.com/JoshDesmond/Website");
 
 
 class App {
@@ -16,10 +17,18 @@ class App {
 
         this.view.model = model;
 
+        // Attach controller for contact form
+        const form = document.getElementById('contact-form');
+        if (form.attachEvent) {
+            form.attachEvent("submit", onSubmit);
+        } else {
+            form.addEventListener("submit", onSubmit);
+        }
+
+        // Set up canvas simulation
         for (const p of this.model.particles) {
             p.subscribeObserver(this.view);
         }
-
 
         canvas.addEventListener('mousemove', (event) => {
             this.model.updateMousePosition(event.x, event.y);
