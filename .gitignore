@@ -42,6 +42,7 @@ www/styles/index.html
 *.log
 *.sql
 *.sqlite
+logs.txt
 
 # ignore compiled files
 *.com

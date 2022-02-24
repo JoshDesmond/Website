@@ -19,5 +19,8 @@ export function onSubmit(e) {
 
     const result = response.then((res) => {
         console.log(res);
+		alert("Your message has been sent. A confirmation email has been sent "
+			+ "to your inbox");
     });
+
 }
