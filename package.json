@@ -1,29 +1,22 @@
 {
   "name": "node-web-env",
   "version": "1.0.0",
-  "description": "an personal npm package for web development",
+  "description": "A personal portfolio website",
   "main": "www/src/index.js",
   "type": "module",
-  "directories": {
-    "test": "test"
-  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "snowpack dev",
-    "build": "snowpack build"
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/JoshDesmond/Website.git"
   },
   "author": "Josh Desmond",
-  "bugs": {
-    "url": "https://github.com/JoshDesmond/Website/issues"
-  },
   "homepage": "https://github.com/JoshDesmond/Website#readme",
   "devDependencies": {
-    "mocha": "^9.2.1",
-    "snowpack": "^3.8.8"
+    "vite": "^6.2.1"
   },
   "browserslist": [
     "last 2 Chrome versions",
