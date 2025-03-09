@@ -92,48 +92,143 @@
   <!-- My Portfolio/Work -->
   <section class="my-work" id="work">
     <h2 class="section__title">My work</h2>
-    <p class="section__subtitle"></p>
+    <p class="section__subtitle">Projects I've built</p>
+
+    <!-- Filter buttons -->
+    <div class="portfolio__filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="web">Web Development</button>
+      <button class="filter-btn" data-filter="mobile">Mobile Apps</button>
+      <button class="filter-btn" data-filter="other">Other</button>
+    </div>
 
     <div class="portfolio container">
       <!-- Project 1: Poker Preflop Range Generator -->
-      <div class="portfolio__item">
-        <img src="www/public/img/poker.jpg" alt="" class="portfolio__img" />
+      <div class="portfolio__item" data-category="web">
+        <div class="portfolio__img-container">
+          <img src="www/public/img/poker.jpg" alt="Poker Range Generator" class="portfolio__img" />
+          <span class="status-badge completed">Completed</span>
+        </div>
         <div class="portfolio__item--content">
           <h3 class="portfolio__item--title">Poker Range Generator</h3>
           <p class="portfolio__item--snippet">This simple webapp, built using D3.js, helps poker players find and
             visualize a range of hands to play or fold.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">D3.js</span>
+          </div>
           <div class="portfolio__item--buttons">
-            <a class="button" href="https://joshdesmond.github.io/PokerHandRangeGenerator/">Link</a>
-            <a class="button" href="https://github.com/JoshDesmond/PokerHandRangeGenerator">Repo</a>
+            <a class="button button-primary" href="https://joshdesmond.github.io/PokerHandRangeGenerator/">Live Demo</a>
+            <a class="button button-secondary" href="https://github.com/JoshDesmond/PokerHandRangeGenerator">
+              <i class="github-icon"></i>View Code</a>
           </div>
         </div>
       </div>
 
       <!-- Project 2: Halfway -->
-      <div class="portfolio__item">
-        <img src="www/public/img/halfway.jpg" alt="" class="portfolio__img" />
+      <div class="portfolio__item" data-category="mobile">
+        <div class="portfolio__img-container">
+          <img src="www/public/img/halfway.jpg" alt="Halfway App" class="portfolio__img" />
+          <span class="status-badge completed">Completed</span>
+        </div>
         <div class="portfolio__item--content">
           <h3 class="portfolio__item--title">Halfway: Android App</h3>
           <p class="portfolio__item--snippet">Halfway is an android app that leverages the Google Places API to find
-            suitable meeting places between multiple people. Read more about the final results in the paper linked.</p>
+            suitable meeting places between multiple people.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Android</span>
+          </div>
           <div class="portfolio__item--buttons">
-            <a class="button" href="https://tinyurl.com/y5slgbxk">Link</a>
-            <a class="button" href="https://github.com/xjsc16x/halfway-app">Repo</a>
+            <a class="button button-primary" href="https://tinyurl.com/y5slgbxk">View Paper</a>
+            <a class="button button-secondary" href="https://github.com/xjsc16x/halfway-app">
+              <i class="github-icon"></i>View Code</a>
           </div>
         </div>
       </div>
 
       <!-- Project 3: SmartBlock -->
-      <div class="portfolio__item">
-        <img src="www/public/img/Smartblock.jpg" alt="" class="portfolio__img" />
+      <div class="portfolio__item" data-category="web">
+        <div class="portfolio__img-container">
+          <img src="www/public/img/Smartblock.jpg" alt="SmartBlock Extension" class="portfolio__img" />
+          <span class="status-badge in-progress">In Progress</span>
+        </div>
         <div class="portfolio__item--content">
           <h3 class="portfolio__item--title">Browser Extension: SmartBlock</h3>
           <p class="portfolio__item--snippet">SmartBlock is a browser extension that intelligently blocks distracting
-            websites. Work on the project is ongoing, but various project components demonstrate experience with
-            express.js, sql, webpack, python, and keras.</p>
+            websites, using machine learning to help improve focus.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">SQL</span>
+            <span class="tech-tag">Webpack</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Keras</span>
+          </div>
           <div class="portfolio__item--buttons">
-            <a class="button" href="https://github.com/JoshDesmond/SmartBlock">Link</a>
-            <a class="button" href="https://github.com/JoshDesmond/SmartBlock">Repo</a>
+            <a class="button button-secondary" href="https://github.com/JoshDesmond/SmartBlock">
+              <i class="github-icon"></i>View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 4: FocusPet -->
+      <div class="portfolio__item" data-category="mobile">
+        <div class="portfolio__img-container">
+          <img src="www/public/img/focuspet.jpg" alt="FocusPet App" class="portfolio__img" />
+          <span class="status-badge prototype">Prototype</span>
+        </div>
+        <div class="portfolio__item--content">
+          <h3 class="portfolio__item--title">FocusPet</h3>
+          <p class="portfolio__item--snippet">A mobile app that uses gamification to help improve focus and
+            productivity. Take care of a virtual pet by staying focused on your tasks.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">React Native</span>
+          </div>
+          <div class="portfolio__item--buttons">
+            <a class="button button-primary" href="#">Watch Demo</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 5: NewEnglandMelee.com -->
+      <div class="portfolio__item" data-category="web">
+        <div class="portfolio__img-container">
+          <img src="www/public/img/nemelee.jpg" alt="New England Melee" class="portfolio__img" />
+          <span class="status-badge coming-soon">Coming Soon</span>
+        </div>
+        <div class="portfolio__item--content">
+          <h3 class="portfolio__item--title">NewEnglandMelee.com</h3>
+          <p class="portfolio__item--snippet">A comprehensive platform for the New England Super Smash Bros. Melee
+            community to find tournaments, connect, and track results.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="portfolio__item--buttons">
+            <a class="button button-secondary" href="#">
+              <i class="github-icon"></i>View Code</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 6: StarCredits -->
+      <div class="portfolio__item" data-category="mobile">
+        <div class="portfolio__img-container">
+          <img src="www/public/img/starcredits.jpg" alt="StarCredits App" class="portfolio__img" />
+          <span class="status-badge in-progress">In Progress</span>
+        </div>
+        <div class="portfolio__item--content">
+          <h3 class="portfolio__item--title">StarCredits</h3>
+          <p class="portfolio__item--snippet">A mobile app for hosting ante-style tournaments at parties. Players earn
+            and bet virtual credits based on game performance.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+          <div class="portfolio__item--buttons">
+            <a class="button button-secondary" href="#">
+              <i class="github-icon"></i>View Code</a>
           </div>
         </div>
       </div>

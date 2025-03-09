@@ -47,8 +47,38 @@ class App {
     }
 }
 
-
 const views = new View(document);
 const canvas = document.getElementById('intro-canvas');
 const model = new Model(canvas.getBoundingClientRect().width, canvas.getBoundingClientRect().height);
 const app = new App(model, views);
+
+// Temporary insertion of top level code to work with porfolio section:
+
+// Portfolio filtering
+document.addEventListener('DOMContentLoaded', function () {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const portfolioItems = document.querySelectorAll('.portfolio__item');
+
+    // Add click event listeners to each filter button
+    filterButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Get the filter value from the data-filter attribute
+            const filterValue = button.getAttribute('data-filter');
+
+            // Update active button state
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+
+            // Filter the portfolio items
+            portfolioItems.forEach(item => {
+                const category = item.getAttribute('data-category');
+
+                if (filterValue === 'all' || filterValue === category) {
+                    item.classList.remove('hidden');
+                } else {
+                    item.classList.add('hidden');
+                }
+            });
+        });
+    });
+});

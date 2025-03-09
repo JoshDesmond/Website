@@ -375,17 +375,47 @@ img#headshot {
   padding: 4%;
 }
 
-
 /** ====== My work section ====== */
 .my-work {
   background-color: var(--clr-dark);
   color: var(--clr-light);
+  padding-bottom: 4em;
 }
 
 .my-work .section__title {
   margin-top: 2em;
 }
 
+.section__subtitle {
+  margin-bottom: 2em;
+}
+
+/* Filter buttons */
+.portfolio__filters {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 2em;
+}
+
+.filter-btn {
+  background: var(--clr-double-dark);
+  border: none;
+  color: var(--clr-light);
+  padding: 0.5em 1em;
+  margin: 0 0.5em 0.5em;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 200ms ease-in-out;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+  background: var(--clr-accent);
+  color: var(--clr-dark);
+}
+
+/* Portfolio container */
 .portfolio {
   display: flex;
   flex-wrap: wrap;
@@ -393,7 +423,7 @@ img#headshot {
 }
 
 .portfolio__item {
-  flex: 1 0 200px;
+  flex: 1 0 300px;
   background: var(--clr-double-dark);
   border-radius: 5px;
   box-shadow: var(--shadow);
@@ -401,18 +431,71 @@ img#headshot {
   overflow: hidden;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: stretch;
   transition: all 200ms ease-in-out;
-  margin: .5em;
+  margin: 1em;
 }
 
 .portfolio__item:hover {
   transform: translateY(-.25rem);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
 }
 
+.portfolio__item.hidden {
+  display: none;
+}
+
+/* Image container and status badge */
+.portfolio__img-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.portfolio__img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  transition: transform 200ms ease-in-out;
+}
+
+.portfolio__item:hover .portfolio__img {
+  transform: scale(1.05);
+}
+
+.status-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 0.7rem;
+  padding: 0.25em 0.75em;
+  border-radius: 50px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: white;
+}
+
+.status-badge.completed {
+  background-color: #28a745; /* Green */
+}
+
+.status-badge.in-progress {
+  background-color: #ffc107; /* Yellow */
+  color: #212529;
+}
+
+.status-badge.prototype {
+  background-color: #17a2b8; /* Cyan */
+}
+
+.status-badge.coming-soon {
+  background-color: #6f42c1; /* Purple */
+}
+
+/* Portfolio item content */
 .portfolio__item--content {
-  padding: 1rem;
+  padding: 1.5rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -420,37 +503,104 @@ img#headshot {
 
 .portfolio__item--title {
   font-size: var(--fs-h3);
-  padding-bottom: .8em;
-}
-
-.portfolio__img {
-  width: 100%;
-  height: auto;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
+  margin-bottom: 0.8em;
+  color: var(--clr-accent);
 }
 
 .portfolio__item--snippet {
   font-size: var(--fs-body);
+  margin-bottom: 1em;
+  flex-grow: 1;
 }
 
+/* Tech tags */
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 1.5em;
+}
+
+.tech-tag {
+  font-size: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--clr-light);
+  padding: 0.25em 0.75em;
+  border-radius: 50px;
+  margin: 0 0.5em 0.5em 0;
+}
+
+/* Buttons */
 .portfolio__item--buttons {
   width: 100%;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  justify-content: space-between;
   margin-top: auto;
 }
 
-.portfolio__item--buttons>.button {
-  width: 100%;
-  margin: 0;
-  padding: 0;
-  color: var(--clr-light);
+.button {
+  display: inline-block;
+  text-decoration: none;
+  padding: 0.5em 1.25em;
+  font-size: 0.9rem;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 4px;
+  transition: all 200ms ease-in-out;
+  margin: 0.25em 0;
 }
 
-.portfolio__item--buttons>.button:hover {
+.button-primary {
+  background-color: var(--clr-accent);
+  color: var(--clr-dark);
+  flex: 1;
+  margin-right: 0.5em;
+}
+
+.button-primary:hover {
+  background-color: var(--clr-accent-light);
+  color: var(--clr-dark);
+}
+
+.button-secondary {
+  background-color: transparent;
+  border: 1px solid var(--clr-light);
+  color: var(--clr-light);
+  flex: 1;
+}
+
+.button-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
   color: var(--clr-accent);
+}
+
+.github-icon::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%23ffffff'%3E%3Cpath d='M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z'/%3E%3C/svg%3E");
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 5px;
+  vertical-align: text-bottom;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  .portfolio__item {
+    flex: 1 0 100%;
+    max-width: none;
+  }
+  
+  .portfolio__item--buttons {
+    flex-direction: column;
+  }
+  
+  .button-primary {
+    margin-right: 0;
+    margin-bottom: 0.5em;
+  }
 }
 
 /** ====== Contact Section ====== */
